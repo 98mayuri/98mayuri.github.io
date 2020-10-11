@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+body {
+ font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.container {
+ max-width: 1000px;
+ margin: 0 auto;
+}
+
+.heading, .sub-title {
+ text-align: center;
+}
+
+.sub-title {
+    margin-top: -15px;
+    font-family: 'EB Garamond';
+    font-style: italic;
+}
+
+.sub-title:nth-of-type(2) {
+    padding-bottom: 50px;
+}
+
+.adventure {
+ width: 50%;
+ margin: 0 auto;
+ display: flex;
+ flex-direction: row;
+}
+
+.path1, .path2 {
+ border: 2px solid black;
+ flex: 1;
+ margin: 5px;
+}
+
+.path1:hover {
+  background-color: black;
+  color: white;
+}
+
+.path2:hover {
+  background-color: black;
+  color: white;
+}
+
+.path1, .path2 {
+ text-align: center;	
+ cursor: pointer;
+}
+
+.path1-desc, .path2-desc {
+ display: none;
+} 
+
+.phktn {
+    margin-top: 30px;
+    width: 40%;
+    float: left;
+}
+
+.phkt {
+    width: 60%;
+    float: left;
+}
+
+.path1-desc, .path2-desc {
+    margin-top: 100px;
+}
+
+.path1-desc-title, .path2-desc-title {
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+}
+
+.aside {
+    position: absolute;
+    top: 20px;
+    left:20px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="landing">
+<h1 class="heading">Phenyl Ketonuria</h1>
+<p class="sub-title">A Project by <b>S Mayuri</b>, MS183063</p>
+<p class="sub-title">BTCZ, III<sup>rd</sup> year</p>
+
+<div>
+<p>Phenyl Ketonuria (a.k.a PKU) is an autosomal recessive genetic disorder characterized by the deficiency in the enzyme Phenyl Alanine Hydroxylase. The translation
+of the Enzyme—Phenyl Alanine Hydroxylase—is governed by the Phenyl Alanine Hydroxylase (abbr PAH) gene which is located on Chromosome Number 12. This mutation 
+could cause more than 400 different types of diseases, Phenyl Ketonuria being one of them. In order to understand the disease better, we will have to look into the
+metabolism process with and without the PAH Gene.</p>
+
+<p><i>Please click on one of the two buttons to explore the metabolism process involved with/without the PAH (Phenyl Alanine Hydroxylase) gene:</i></p>
+</div>
+<div class="adventure">
+<div onClick="exploreMutationlessPath()" class="path1">
+ <p>Metabolism with <b>PAH</b> Gene</p>
+</div>
+<div onClick="exploreMutationPath()" class="path2">
+ <p>Metabolism without <b>PAH</b> Gene</p>
+</div>
+</div>
+</div>
+
+<div class="path">
+<div class="path1-desc">
+<div class="path1-desc-title">
+<p>Metabolism with <b>PAH</b> Gene</p>
+</div>
+<p onClick="showLandingPage()" class="aside">Phenyl Ketonuria</p>
+<img class="phkt" src="phkt.png">
+<p>Metabolism with PAH Enzyme is necessary to convert Phenyl Alanine to Tyrosine. Tyrosine is essential for the formation of Dopamine, Norepinephrine,
+Epinephrine and Thyroxine production.In the process of conversion it produces Fumaric acid and Acetoacetic acid which helps in the conversion of the tyrosine 
+metabolite DOPA into the neurotransmitters epinephrine and norepinephrine. PAH is a three membered biopterin dependent aromatic acid hydroxylase. It uses 
+Tetrahydrobiopterin which is cofactor necessary to activate the PAH which gets converted to Dihydrobiopterin by the enzyme Dihydrobiopterin Reductase 
+which uses NADPH as hydrogen donor.Tyrosine is also responsible for the formation of melanine hence the absence of tyrosine could lead to Albinism and 
+In addition , areas of brain that are usually pigmented (Eg:The substantial Nigra), also lacks the pigment.   (T<sub>3</sub>).</p>
+</div> <!-- Path1 Desc End-->
+
+<div class="path2-desc">
+<div class="path2-desc-title">
+<p>Metabolism without <b>PAH</b> Gene</p>
+</div>
+<p onClick="showLandingPage()" class="aside">Phenyl Ketonuria</p>
+<img class="phktn" src="phktn.jpg">
+<p>Metabolism without PAH Enzyme leads to excessive accumulation of Phenyl Alanine which gets metabolized by different pathway one is Transamination and the other one is Decarboxylation, 
+    Incase of transamination phenyl Alanine is converted to Phenyl Pyruvate in presence Transaminase which then gets converted to Phenyl-lactate, O-hydroxyphenylacetate and 
+    Phenylacetate and In Decarboxylation it gets converted to Phenylethylamine and which in turn gets converted to Phenylacetylglutamate. Excessive phenylalanine in the blood 
+    brain barrier leads to decrease in the essential large neutral amino acids which is required for neurotransmitter synthesis, Hence it leads to mental retardation. 
+    Normal plasma level of phenylalanine = 1-2 mg/dl in case of PKU the level of phenylalanine in the blood = 20-65 mg/dl 
+</p>
+
+<h2>Biochemical manisfestation of PKU </h2>
+<ul>
+<li>It effects on central nervous system leading to Mental retardation , Failure to walk/talk , Failure of Growth , Seizures and Tremors and Low IQ.</li>
+<li>It effects kidney filtration leading to musty odour due to the presence of ketones and Phenylacetate.</li>
+</ul> 
+
+<h3>Diagnosis</h3>
+<ul>
+<li>PKU can be diagonised by the presence of Elevated level of phenyl alanine in the blood.</li>
+<li>Detection of phenyl ketones in the urine.</li>
+<li>PKU is routinely screened in infants using The Guthrie test (Ferric chloride test) in which if there is a presence of phenylpyruvate it forms a complex
+    with ferric chloride and produces an intense blue-green color.</li>
+<li>It can be also detected using the bacterium Bacillus Subtilis which needs Phenyl Alanine as a substrate for this bacterium.</li>
+</ul>
+
+
+<h3>Treatments</h3>
+            
+        
+<li>Avoiding restricting food rich in Phenyl Alanine (meat, fist, nuts, cheese etc)</li>
+<li>Avoid soft drinks containing aspartame (Phenyl Alanine + Aspartic Acid)</li>
+<li>Use supplementary infant formulas.</li>
+<li>Oral adminitration of Tetrahydrobiopterin (co-factor in the oxidation of Pheynyl Alanine) eg:
+"kuvan" tablet</li>
+<li>Injections of PAH</li>
+<li>Gene Therapy</li>
+</div> <!-- Path2 Desc End-->
+</div> <!-- Path End -->
+</div> <!-- Container End -->
+
+<script>
+function exploreMutationlessPath() {
+  document.querySelector(".landing").style="display: none";
+  document.querySelector(".path2-desc").style="display: none";
+  document.querySelector(".path1-desc").style="display: block";
+} 
+
+function exploreMutationPath() {
+  document.querySelector(".landing").style="display: none";
+  document.querySelector(".path1-desc").style="display: none";
+  document.querySelector(".path2-desc").style="display: block";
+}
+
+function showLandingPage() {
+  document.querySelector(".landing").style="display: block";
+  document.querySelector(".path1-desc").style="display: none";
+  document.querySelector(".path2-desc").style="display: none";  
+}
+</script>
+</body>
+</html> 
